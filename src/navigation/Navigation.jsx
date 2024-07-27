@@ -25,6 +25,7 @@ import UserLayout from "../components/layout/UserLayout";
 
 import { Toaster } from "react-hot-toast";
 import UserDashboard from "../components/UserRoute/userDashboard/UserDashboard";
+import IdCard from "../components/UserRoute/idcard/IdCard";
 
 function Navigation() {
     return (
@@ -47,15 +48,15 @@ function Navigation() {
                         <Route index element={<Home />} />
                         <Route path="login" element={<Login />} />
                         <Route path="verify-otp" element={<VerifyOtp />} />
-                        <Route path="student-portal" element={<StudentPortal />} />
 
                     </Route>
                     {/* user */}
                     <Route path="/dashboard" element={<UserLayout />}>
                         <Route index element={<UserDashboard />} />
 
-                        <Route path="entry-test" element={<EntryTest />} />
                         <Route path="verify-otp" element={<VerifyOtp />} />
+                        <Route path="entry-test" element={<EntryTest />} />
+                        <Route path="download" element={<IdCard />} />
 
                     </Route>
                     <Route path="/*" element={<NoPage />} />
