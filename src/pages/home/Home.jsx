@@ -1,17 +1,26 @@
-import toast from "react-hot-toast"
-import IdCard from "../../components/idcard/IdCard"
-import Result from "../../components/result/Result"
+import IdCard from "../../components/UserRoute/idcard/IdCard"
+import Result from "../../components/PublicRoute/result/Result"
+import Signup from "../../components/PublicRoute/signup/Signup"
+import StudentPortal from "../studentPortal/StudentPortal"
+import { Link } from "react-router-dom"
+
 
 const Home = () => {
-    const check = () => {
-        console.log("Toast is working")
-        toast.error("toast is working")
-    }
+
     return (
         <>
-            <IdCard />
+
+
+            <Signup />
             <Result />
-            <button onClick={check}> toast is working</button>
+            <IdCard />
+            <StudentPortal />
+
+
+            <Link to={"/dashboard"}>
+
+            </Link>
+
 
         </>
     )

@@ -10,20 +10,21 @@ import NoPage from "../pages/nopage/NoPage";
 import Home from "../pages/home/Home";
 import StudentPortal from "../pages/studentPortal/StudentPortal";
 
-import Admin from "../components/admin/Admin";
-import SendNotification from "../components/sendnotification/SendNotification";
+import Admin from "../components/AdminRoute/admin/Admin";
+import SendNotification from "../components/AdminRoute/sendnotification/SendNotification";
 
-import Login from "../components/login/Login";
-import Signup from "../components/signup/Signup";
-import VerifyOtp from "../components/verifyotp/VerifyOtp";
+import Login from "../components/PublicRoute/login/Login";
 
-import EntryTest from "../components/entryTest/EntryTest";
+import VerifyOtp from "../components/PublicRoute/verifyotp/VerifyOtp";
+
+import EntryTest from "../components/UserRoute/entryTest/EntryTest";
 
 import AdminLayout from "../components/layout/AdminLayout";
 import PublicLayout from "../components/layout/PublicLayout";
 import UserLayout from "../components/layout/UserLayout";
 
 import { Toaster } from "react-hot-toast";
+import UserDashboard from "../components/UserRoute/userDashboard/UserDashboard";
 
 function Navigation() {
     return (
@@ -44,14 +45,14 @@ function Navigation() {
                     {/* public */}
                     <Route path="/" element={<PublicLayout />}>
                         <Route index element={<Home />} />
-                        <Route path="signup" element={<Signup />} />
                         <Route path="login" element={<Login />} />
                         <Route path="verify-otp" element={<VerifyOtp />} />
+                        <Route path="student-portal" element={<StudentPortal />} />
 
                     </Route>
                     {/* user */}
-                    <Route path="/student-portal" element={<UserLayout />}>
-                        <Route index element={<StudentPortal />} />
+                    <Route path="/dashboard" element={<UserLayout />}>
+                        <Route index element={<UserDashboard />} />
 
                         <Route path="entry-test" element={<EntryTest />} />
                         <Route path="verify-otp" element={<VerifyOtp />} />

@@ -1,0 +1,23 @@
+.form-group label {
+    font-weight: bold;
+    color: #28a745;
+    /* Change this to the desired color */
+    margin-bottom: 0.5rem;
+}
+
+.custom-file-label::after {
+    content: "Browse";
+}
+
+.declaration {
+    margin-top: 20px;
+}
+
+.declaration p {
+    font-size: 0.9rem;
+}
+
+.submit-btn {
+    text-align: center;
+    margin-top: 20px;
+}
